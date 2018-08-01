@@ -11,6 +11,8 @@
     <form id="form1" runat="server">
         <div>
             <asp:HyperLink NavigateUrl="~/WebFormTitle.aspx" ID="HyperLink1" runat="server" Font-Names="Verdana">Cadastro de Livros</asp:HyperLink>
+            <br />
+            <asp:HyperLink NavigateUrl="~/WebFormAuthors.aspx" ID="HyperLink2" runat="server" Font-Names="Verdana">Cadastro de Autores</asp:HyperLink>
         </div>
     </form>
 </body>

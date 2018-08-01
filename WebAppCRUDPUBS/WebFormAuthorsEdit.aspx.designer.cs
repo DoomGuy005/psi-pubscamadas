@@ -10,7 +10,7 @@
 namespace WebAppCRUDPUBS {
     
     
-    public partial class WebFormMenu {
+    public partial class WebFormAuthorsEdit {
         
         /// <summary>
         /// Controle form1.
@@ -22,21 +22,21 @@ namespace WebAppCRUDPUBS {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Controle HyperLink1.
+        /// Controle Label1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Controle HyperLink2.
+        /// Controle GridView1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }
