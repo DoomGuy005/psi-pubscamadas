@@ -23,7 +23,7 @@ namespace WebAppCRUDPUBS.Modelo
             this.title_id = "";
             this.title = "";
             this.pub_id = "";
-        }
+    }
         public Title(string atitle_id, string atitle, string apub_id)
         {
             this.title_id = atitle_id;

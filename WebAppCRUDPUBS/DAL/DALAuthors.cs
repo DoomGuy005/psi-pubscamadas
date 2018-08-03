@@ -42,7 +42,7 @@ namespace WebAppCRUDPUBS.DAL
                     // Cria objeto com dados lidos do banco de dados
                     aAuthor = new Modelo.Authors(
                         dr["au_id"].ToString(),
-                        dr["au_name"].ToString(),
+                        dr["au_lname"].ToString(),
                         dr["au_fname"].ToString(),
                         dr["phone"].ToString(),
                         dr["address"].ToString(),
@@ -50,7 +50,7 @@ namespace WebAppCRUDPUBS.DAL
                         dr["state"].ToString(),
                         dr["zip"].ToString()
                         );
-                    // Adiciona o livro lido à lista
+                    // Adiciona o autor lido à lista
                     aListAuthors.Add(aAuthor);
                 }
 
@@ -71,7 +71,7 @@ namespace WebAppCRUDPUBS.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("DELETE FROM Authors WHERE Author_ID = @au_id", conn);
+            SqlCommand cmd = new SqlCommand("DELETE FROM Authors WHERE au_id = @au_id", conn);
             cmd.Parameters.AddWithValue("@au_id", obj.au_id);
             // Executa Comando
             cmd.ExecuteNonQuery();
@@ -86,9 +86,9 @@ namespace WebAppCRUDPUBS.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("INSERT INTO Authors (au_id, au_name, au_fname, phone, address, city, state, zip) VALUES(@au_id, @au_name, @au_fname, @phone, @address, @city, @state, @zip)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Authors (au_id, au_lname, au_fname, phone, address, city, state, zip) VALUES(@au_id, @au_lname, @au_fname, @phone, @address, @city, @state, @zip)", conn);
             cmd.Parameters.AddWithValue("@au_id", obj.au_id);
-            cmd.Parameters.AddWithValue("@au_name", obj.au_name);
+            cmd.Parameters.AddWithValue("@au_lname", obj.au_name);
             cmd.Parameters.AddWithValue("@au_fname", obj.au_fname);
             cmd.Parameters.AddWithValue("@phone", obj.address);
             cmd.Parameters.AddWithValue("@city", obj.city);
@@ -107,8 +107,9 @@ namespace WebAppCRUDPUBS.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("UPDATE Authors SET au_name = @au_name, au_fname = @au_fname, phone = @phone, address = @address, city = @city, state = @state, zip = @zip WHERE Authors_id = @au_id", conn);
-            cmd.Parameters.AddWithValue("@au_name", obj.au_name);
+            SqlCommand cmd = new SqlCommand("UPDATE Authors SET au_lname = @au_lname, au_fname = @au_fname, phone = @phone, address = @address, city = @city, state = @state, zip = @zip WHERE au_id = @au_id", conn);
+            cmd.Parameters.AddWithValue("@au_id", obj.au_id);
+            cmd.Parameters.AddWithValue("@au_lname", obj.au_name);
             cmd.Parameters.AddWithValue("@au_fname", obj.au_fname);
             cmd.Parameters.AddWithValue("@phone", obj.phone);
             cmd.Parameters.AddWithValue("@address", obj.address);
@@ -144,7 +145,7 @@ namespace WebAppCRUDPUBS.DAL
                     // Cria objeto com dados lidos do banco de dados
                     aAuthors = new Modelo.Authors(
                         dr["au_id"].ToString(),
-                        dr["au_name"].ToString(),
+                        dr["au_lname"].ToString(),
                         dr["au_fname"].ToString(),
                         dr["phone"].ToString(),
                         dr["address"].ToString(),

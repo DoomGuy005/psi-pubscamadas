@@ -38,7 +38,7 @@
                         <ItemTemplate>
                             <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Editar"></asp:LinkButton>
                             &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="New" Text="Novo"></asp:LinkButton>
-                            &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" CausesValidation="False" CommandName="Delete" OnClientClick="<%# “javascript:return ConfirmaExclusao();” %>" Text="Excluir"></asp:LinkButton>
+                            &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" CausesValidation="False" CommandName="Delete" OnClientClick="" Text="Excluir"></asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Fields>

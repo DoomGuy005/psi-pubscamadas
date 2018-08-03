@@ -10,21 +10,33 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Cadastro de Autores" Font-Names="Verdana"></asp:Label>
-            <hr/>
-            <asp:GridView ID="GridView1" runat="server" CellPadding="4" Font-Names="Calibri" ForeColor="#333333" GridLines="None">
+            <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" CellPadding="4" DataSourceID="ObjectDataSource1" Font-Names="Calibri" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />
                 <EditRowStyle BackColor="#999999" />
+                <FieldHeaderStyle BackColor="#E9ECF1" Font-Bold="True" />
+                <Fields>
+                    <asp:BoundField DataField="au_id" HeaderText="ID" SortExpression="au_id" />
+                    <asp:BoundField DataField="au_name" HeaderText="Nome" SortExpression="au_name" />
+                    <asp:BoundField DataField="au_fname" HeaderText="Sobrenome" SortExpression="au_fname" />
+                    <asp:BoundField DataField="phone" HeaderText="Fone" SortExpression="phone" />
+                    <asp:BoundField DataField="address" HeaderText="Endereço" SortExpression="address" />
+                    <asp:BoundField DataField="city" HeaderText="Cidade" SortExpression="city" />
+                    <asp:BoundField DataField="state" HeaderText="Estado" SortExpression="state" />
+                    <asp:BoundField DataField="zip" HeaderText="CEP" SortExpression="zip" />
+                    <asp:CheckBoxField DataField="contract" HeaderText="Contratado" SortExpression="contract" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                </Fields>
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                 <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
                 <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-            </asp:GridView>
+            </asp:DetailsView>
+            <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DataObjectTypeName="WebAppCRUDPUBS.Modelo.Authors" DeleteMethod="Delete" InsertMethod="Insert" SelectMethod="Select" TypeName="WebAppCRUDPUBS.DAL.DALAuthors" UpdateMethod="Update">
+                <SelectParameters>
+                    <asp:SessionParameter Name="au_id" SessionField="au_id" Type="String" />
+                </SelectParameters>
+            </asp:ObjectDataSource>
         </div>
     </form>
 </body>

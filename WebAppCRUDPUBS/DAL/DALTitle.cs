@@ -66,7 +66,7 @@ namespace WebAppCRUDPUBS.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("DELETE FROM Titles WHERE Title_ID = @title_id", conn);
+            SqlCommand cmd = new SqlCommand("DELETE FROM Titles WHERE title_ID = @title_id", conn);
             cmd.Parameters.AddWithValue("@title_id", obj.title_id);
             // Executa Comando
             cmd.ExecuteNonQuery();
@@ -98,7 +98,7 @@ namespace WebAppCRUDPUBS.DAL
             // Cria comando SQL
             SqlCommand com = conn.CreateCommand();
             // Define comando de exclusão
-            SqlCommand cmd = new SqlCommand("UPDATE Titles SET title = @title, pub_id = @pub_id WHERE Title_ID = @title_id", conn);
+            SqlCommand cmd = new SqlCommand("UPDATE Titles SET title = @title, pub_id = @pub_id WHERE title_ID = @title_id", conn);
             cmd.Parameters.AddWithValue("@title_id", obj.title_id);
             cmd.Parameters.AddWithValue("@title", obj.title);
             cmd.Parameters.AddWithValue("@pub_id", obj.pub_id);

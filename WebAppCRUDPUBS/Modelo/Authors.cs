@@ -32,13 +32,14 @@ namespace WebAppCRUDPUBS.Modelo
         public Authors(string aau_id, string aau_name, string aau_fname, string aphone, string aaddress, string acity, string astate, string azip)
         {
             this.au_id = aau_id;
-            this.au_name = au_name;
-            this.au_fname = au_fname;
+            this.au_name = aau_name;
+            this.au_fname = aau_fname;
             this.phone = aphone;
             this.address = aaddress;
             this.city = acity;
             this.state = astate;
             this.zip = azip;
+            this.contract = true;
         }
     }
 }
