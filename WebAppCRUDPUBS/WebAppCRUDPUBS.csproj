@@ -69,13 +69,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
-    <Content Include="WebFormAuthors.aspx" />
-    <Content Include="WebFormAuthorsEdit.aspx" />
-    <Content Include="WebFormAuthorsNew.aspx" />
-    <Content Include="WebFormMenu.aspx" />
-    <Content Include="WebFormTitle.aspx" />
-    <Content Include="WebFormTitleEdit.aspx" />
-    <Content Include="WebFormTitleNew.aspx" />
+    <Content Include="Visão\WebFormAuthors.aspx" />
+    <Content Include="Visão\WebFormAuthorsEdit.aspx" />
+    <Content Include="Visão\WebFormAuthorsNew.aspx" />
+    <Content Include="Visão\WebFormAuthorsRep.aspx" />
+    <Content Include="Visão\WebFormMenu.aspx" />
+    <Content Include="Visão\WebFormTitle.aspx" />
+    <Content Include="Visão\WebFormTitleEdit.aspx" />
+    <Content Include="Visão\WebFormTitleNew.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\DALAuthors.cs" />
@@ -83,53 +84,60 @@
     <Compile Include="Modelo\Authors.cs" />
     <Compile Include="Modelo\Title.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebFormAuthors.aspx.cs">
+    <Compile Include="Visão\WebFormAuthors.aspx.cs">
       <DependentUpon>WebFormAuthors.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebFormAuthors.aspx.designer.cs">
+    <Compile Include="Visão\WebFormAuthors.aspx.designer.cs">
       <DependentUpon>WebFormAuthors.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebFormAuthorsEdit.aspx.cs">
+    <Compile Include="Visão\WebFormAuthorsEdit.aspx.cs">
       <DependentUpon>WebFormAuthorsEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebFormAuthorsEdit.aspx.designer.cs">
+    <Compile Include="Visão\WebFormAuthorsEdit.aspx.designer.cs">
       <DependentUpon>WebFormAuthorsEdit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebFormAuthorsNew.aspx.cs">
+    <Compile Include="Visão\WebFormAuthorsNew.aspx.cs">
       <DependentUpon>WebFormAuthorsNew.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebFormAuthorsNew.aspx.designer.cs">
+    <Compile Include="Visão\WebFormAuthorsNew.aspx.designer.cs">
       <DependentUpon>WebFormAuthorsNew.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebFormMenu.aspx.cs">
+    <Compile Include="Visão\WebFormAuthorsRep.aspx.cs">
+      <DependentUpon>WebFormAuthorsRep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visão\WebFormAuthorsRep.aspx.designer.cs">
+      <DependentUpon>WebFormAuthorsRep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visão\WebFormMenu.aspx.cs">
       <DependentUpon>WebFormMenu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebFormMenu.aspx.designer.cs">
+    <Compile Include="Visão\WebFormMenu.aspx.designer.cs">
       <DependentUpon>WebFormMenu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebFormTitle.aspx.cs">
+    <Compile Include="Visão\WebFormTitle.aspx.cs">
       <DependentUpon>WebFormTitle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebFormTitle.aspx.designer.cs">
+    <Compile Include="Visão\WebFormTitle.aspx.designer.cs">
       <DependentUpon>WebFormTitle.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebFormTitleEdit.aspx.cs">
+    <Compile Include="Visão\WebFormTitleEdit.aspx.cs">
       <DependentUpon>WebFormTitleEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebFormTitleEdit.aspx.designer.cs">
+    <Compile Include="Visão\WebFormTitleEdit.aspx.designer.cs">
       <DependentUpon>WebFormTitleEdit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebFormTitleNew.aspx.cs">
+    <Compile Include="Visão\WebFormTitleNew.aspx.cs">
       <DependentUpon>WebFormTitleNew.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebFormTitleNew.aspx.designer.cs">
+    <Compile Include="Visão\WebFormTitleNew.aspx.designer.cs">
       <DependentUpon>WebFormTitleNew.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
